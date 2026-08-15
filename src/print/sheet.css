@@ -148,6 +148,8 @@
   border-bottom: 0.75pt solid var(--sheet-ink);
   padding-bottom: 1.5mm;
   margin-bottom: 3mm;
+  /* A heading alone at the foot of a page is a promise the page cannot keep. */
+  break-after: avoid;
 }
 
 .sheet__section-head span:last-child {
@@ -283,22 +285,18 @@
     border: 0;
   }
 
-  /* Fixed elements repeat on every printed page in Chrome and Safari,
-     which is the closest thing to a running footer without a paged
-     polyfill. There is no page number: CSS @page margin boxes are not
-     supported in any browser. */
-  .sheet__footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0;
-    background: #fff;
-  }
-
-  .sheet__steps {
-    padding-bottom: 10mm;
-  }
+  /* The footer stays in the flow, and prints once at the end.
+     It used to be `position: fixed; bottom: 0` so it would repeat on every
+     page. A fixed box sits outside the flow, so the page reserves no room for
+     it and it paints over whatever the break happens to leave underneath —
+     measured on a 20-step tutorial, it sliced a step's tip clean in half and
+     that line never appeared on either page. Silent data loss: the text is in
+     the file, on screen, and in the export, and simply not on the paper.
+     Pushing it into an enlarged @page bottom margin does not rescue it either;
+     Chrome spills the overflow onto the top of the following page and cuts a
+     different step instead. A running footer needs @page margin boxes, which
+     no browser implements — the same reason there is still no page number. One
+     honest footer beats a repeating one that eats an instruction. */
 }
 
 /* ---- Card mode: A5, for the ones that get laminated ---- */
