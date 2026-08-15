@@ -1,0 +1,351 @@
+/* Blatt — the sheet.
+   Everything here is scoped to .sheet so the file can be injected into the
+   app for preview AND inlined verbatim into the exported HTML. Units are pt
+   and mm throughout, which makes the screen preview true to the print. */
+
+@page {
+  size: A4;
+  margin: 16mm 18mm 14mm;
+}
+
+@page card {
+  size: A5;
+  margin: 10mm 12mm;
+}
+
+.sheet {
+  --sheet-ink: #0a0a0a;
+  --sheet-muted: #6b6b6b;
+  --sheet-rule: #c9c9c9;
+  --sheet-accent: #e4002b;
+
+  font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+  color: var(--sheet-ink);
+  background: #fff;
+  font-size: 9.5pt;
+  line-height: 13pt;
+  text-align: left;
+  hyphens: none;
+}
+
+.sheet *,
+.sheet *::before,
+.sheet *::after {
+  box-sizing: border-box;
+}
+
+.sheet p,
+.sheet h1,
+.sheet h2,
+.sheet ul,
+.sheet ol,
+.sheet li,
+.sheet figure {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sheet img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ---- Screen preview: paper, at true A4 proportions ---- */
+@media screen {
+  .sheet {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 16mm 18mm 14mm;
+    margin: 0 auto;
+    border: 1px solid var(--sheet-rule);
+  }
+}
+
+/* ---- Masthead ---- */
+.sheet__title {
+  font-size: 28pt;
+  line-height: 30pt;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  max-width: 80%;
+}
+
+.sheet__rule {
+  border: 0;
+  border-top: 0.75pt solid var(--sheet-ink);
+  margin: 4mm 0 2mm;
+}
+
+.sheet__meta {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 7.5pt;
+  line-height: 10pt;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sheet-muted);
+}
+
+/* The separator sits between items with equal air on both sides. Baking the
+   dot into the text instead leaves it hugging the word before it. */
+.sheet__meta span:not(:last-child)::after {
+  content: "·";
+  margin: 0 2.5mm;
+}
+
+.sheet__meta strong {
+  color: var(--sheet-ink);
+  font-weight: 700;
+}
+
+/* ---- Cautions ---- */
+.sheet__cautions {
+  margin-top: 5mm;
+  padding: 2.5mm 0;
+  border-top: 0.75pt solid var(--sheet-accent);
+  border-bottom: 0.75pt solid var(--sheet-accent);
+  break-inside: avoid;
+}
+
+.sheet__cautions-label {
+  font-size: 7.5pt;
+  line-height: 10pt;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--sheet-accent);
+  margin-bottom: 1mm;
+}
+
+.sheet__cautions li {
+  font-size: 9pt;
+  line-height: 12pt;
+  padding-left: 5mm;
+  text-indent: -5mm;
+}
+
+.sheet__cautions li::before {
+  content: "— ";
+  color: var(--sheet-accent);
+}
+
+/* ---- Section headings ---- */
+.sheet__section {
+  margin-top: 8mm;
+}
+
+.sheet__section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 7.5pt;
+  line-height: 10pt;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-bottom: 0.75pt solid var(--sheet-ink);
+  padding-bottom: 1.5mm;
+  margin-bottom: 3mm;
+}
+
+.sheet__section-head span:last-child {
+  font-weight: 400;
+  color: var(--sheet-muted);
+}
+
+/* ---- Materials ---- */
+.sheet__supplies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5mm 4mm;
+}
+
+.sheet__supply {
+  break-inside: avoid;
+}
+
+/* Always the same box, whether or not there is a photo in it — an empty
+   hairline frame costs almost no ink and keeps the row of names on one
+   baseline. A missing photo must not shunt its label up the page. */
+.sheet__supply figure {
+  border: 0.5pt solid var(--sheet-rule);
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  margin-bottom: 1.5mm;
+  background: #fff;
+}
+
+.sheet__supply figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sheet__supply-kind {
+  font-size: 6.5pt;
+  line-height: 9pt;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sheet-muted);
+}
+
+.sheet__supply-name {
+  font-size: 9pt;
+  line-height: 11pt;
+  font-weight: 700;
+}
+
+.sheet__supply-note {
+  font-size: 8pt;
+  line-height: 11pt;
+  color: var(--sheet-muted);
+}
+
+/* ---- Steps ---- */
+.sheet__steps {
+  display: block;
+}
+
+.sheet__step {
+  display: grid;
+  grid-template-columns: 12mm 1fr 40mm;
+  gap: 0 5mm;
+  padding: 3mm 0;
+  border-bottom: 0.5pt solid var(--sheet-rule);
+  break-inside: avoid;
+}
+
+.sheet__step:first-child {
+  padding-top: 0;
+}
+
+.sheet__step-number {
+  font-size: 20pt;
+  line-height: 20pt;
+  font-weight: 700;
+  color: var(--sheet-accent);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+}
+
+.sheet__step-text {
+  font-size: 10pt;
+  line-height: 14pt;
+}
+
+.sheet__step-tip {
+  margin-top: 1.5mm;
+  padding-left: 4mm;
+  border-left: 0.75pt solid var(--sheet-rule);
+  font-size: 8pt;
+  line-height: 11pt;
+  color: var(--sheet-muted);
+}
+
+.sheet__step-figures {
+  display: grid;
+  gap: 2mm;
+  align-content: start;
+}
+
+.sheet__step-figures img {
+  border: 0.5pt solid var(--sheet-rule);
+}
+
+/* A step with no image lets the text run into the third column. */
+.sheet__step--wide {
+  grid-template-columns: 12mm 1fr;
+}
+
+/* ---- Footer ---- */
+.sheet__footer {
+  margin-top: 6mm;
+  padding-top: 2mm;
+  border-top: 0.75pt solid var(--sheet-ink);
+  display: flex;
+  justify-content: space-between;
+  gap: 4mm;
+  font-size: 7pt;
+  line-height: 9pt;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sheet-muted);
+}
+
+/* ---- Print ---- */
+@media print {
+  .sheet {
+    width: auto;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  /* Fixed elements repeat on every printed page in Chrome and Safari,
+     which is the closest thing to a running footer without a paged
+     polyfill. There is no page number: CSS @page margin boxes are not
+     supported in any browser. */
+  .sheet__footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background: #fff;
+  }
+
+  .sheet__steps {
+    padding-bottom: 10mm;
+  }
+}
+
+/* ---- Card mode: A5, for the ones that get laminated ---- */
+.sheet--card {
+  font-size: 8.5pt;
+  line-height: 11.5pt;
+}
+
+@media screen {
+  .sheet--card {
+    width: 148mm;
+    min-height: 210mm;
+    padding: 10mm 12mm;
+  }
+}
+
+.sheet--card .sheet__title {
+  font-size: 19pt;
+  line-height: 21pt;
+}
+
+.sheet--card .sheet__supplies {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sheet--card .sheet__step {
+  grid-template-columns: 9mm 1fr 34mm;
+  gap: 0 3.5mm;
+  padding: 2mm 0;
+}
+
+.sheet--card .sheet__step--wide {
+  grid-template-columns: 9mm 1fr;
+}
+
+.sheet--card .sheet__step-number {
+  font-size: 15pt;
+  line-height: 15pt;
+}
+
+.sheet--card .sheet__step-text {
+  font-size: 9pt;
+  line-height: 12pt;
+}
+
+@media print {
+  .sheet--card {
+    page: card;
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "blatt",
+  "compatibility_date": "2026-08-15",
+
+  // An assets-only Worker: no `main`, no server code, nothing to run.
+  // Blatt is entirely local-first, so there is no backend to deploy.
+  "assets": {
+    "directory": "./dist",
+    // Belt and braces. Blatt uses hash routing (#/t/:id), so every real
+    // request is for "/" anyway — but this keeps a mistyped path from 404ing.
+    "not_found_handling": "single-page-application"
+  },
+
+  "observability": {
+    "enabled": true
+  }
+}

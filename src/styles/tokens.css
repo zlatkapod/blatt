@@ -1,0 +1,48 @@
+/* Blatt — design tokens.
+   International Typographic Style: one grotesque, a strict scale,
+   an 8px baseline, hairline rules, and exactly one accent. */
+
+:root {
+  /* Type — Helvetica is the typeface of the movement and is already
+     installed on every machine this will ever run on. No webfont. */
+  --font: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+
+  --t-xs: 12px;
+  --t-sm: 14px;
+  --t-md: 16px;
+  --t-lg: 20px;
+  --t-xl: 28px;
+  --t-2xl: 40px;
+
+  --lh-xs: 16px;
+  --lh-sm: 20px;
+  --lh-md: 24px;
+  --lh-lg: 28px;
+  --lh-xl: 36px;
+  --lh-2xl: 44px;
+
+  --track-caps: 0.08em;
+
+  /* Space — 8px baseline, no improvisation */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+
+  /* Color — black, white, grey, and one red */
+  --ink: #0a0a0a;
+  --paper: #ffffff;
+  --muted: #6b6b6b;
+  --rule: #c9c9c9;
+  --rule-faint: #e6e6e6;
+  --accent: #e4002b;
+  --backdrop: #ededed;
+
+  /* Grid */
+  --gutter: 16px;
+  --measure: 1180px;
+}
