@@ -1,0 +1,15 @@
+{
+  "buildPath": "code",
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "helvetica",
+        "createdAt": "2026-08-15T11:30:28.856Z",
+        "reason": "Incumbent documented decision, not a default: the exported .blatt.html must print identically with no network request, so the face has to be already installed. Recorded in README 'Design' and DESIGN.md as The One Grotesque Rule. Rule targets Inter/Roboto/Geist-class webfonts; Helvetica here is a print constraint."
+      }
+    ]
+  }
+}

@@ -1,0 +1,353 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-15T10:51:53Z",
+  "title": "Design System: Blatt",
+  "extensions": {
+    "colorMeta": {
+      "accent": {
+        "role": "primary",
+        "displayName": "Poster Red",
+        "canonical": "#e4002b",
+        "tonalRamp": [
+          "oklch(0.15 0.075 27)",
+          "oklch(0.25 0.125 27)",
+          "oklch(0.35 0.170 27)",
+          "oklch(0.45 0.205 27)",
+          "oklch(0.55 0.235 27)",
+          "oklch(0.68 0.190 27)",
+          "oklch(0.82 0.110 27)",
+          "oklch(0.95 0.035 27)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Press Black",
+        "canonical": "#0a0a0a",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.26 0 0)",
+          "oklch(0.37 0 0)",
+          "oklch(0.48 0 0)",
+          "oklch(0.59 0 0)",
+          "oklch(0.71 0 0)",
+          "oklch(0.83 0 0)",
+          "oklch(0.95 0 0)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Sheet White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.26 0 0)",
+          "oklch(0.37 0 0)",
+          "oklch(0.48 0 0)",
+          "oklch(0.59 0 0)",
+          "oklch(0.71 0 0)",
+          "oklch(0.83 0 0)",
+          "oklch(1.00 0 0)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Annotation Grey",
+        "canonical": "#6b6b6b",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.26 0 0)",
+          "oklch(0.37 0 0)",
+          "oklch(0.51 0 0)",
+          "oklch(0.62 0 0)",
+          "oklch(0.73 0 0)",
+          "oklch(0.84 0 0)",
+          "oklch(0.95 0 0)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline Grey",
+        "canonical": "#c9c9c9",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.26 0 0)",
+          "oklch(0.37 0 0)",
+          "oklch(0.48 0 0)",
+          "oklch(0.60 0 0)",
+          "oklch(0.72 0 0)",
+          "oklch(0.84 0 0)",
+          "oklch(0.95 0 0)"
+        ]
+      },
+      "rule-faint": {
+        "role": "neutral",
+        "displayName": "Ghost Rule",
+        "canonical": "#e6e6e6",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.26 0 0)",
+          "oklch(0.37 0 0)",
+          "oklch(0.48 0 0)",
+          "oklch(0.60 0 0)",
+          "oklch(0.75 0 0)",
+          "oklch(0.91 0 0)",
+          "oklch(0.97 0 0)"
+        ]
+      },
+      "backdrop": {
+        "role": "neutral",
+        "displayName": "Bench Grey",
+        "canonical": "#ededed",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.26 0 0)",
+          "oklch(0.37 0 0)",
+          "oklch(0.48 0 0)",
+          "oklch(0.60 0 0)",
+          "oklch(0.76 0 0)",
+          "oklch(0.93 0 0)",
+          "oklch(0.98 0 0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The Library title. One per screen, only where a page needs a name."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "The tutorial title field in the editor — the one input that looks like the thing it will become."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "The Blatt wordmark and empty-state headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All editable text and prose. Form column capped at 620px; empty-state prose at 46ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Field labels, buttons, filters, meta rows, counts, status. Uppercase, tracked 0.08em. The system's connective tissue."
+      },
+      "sheet-title": {
+        "displayName": "Sheet Title",
+        "purpose": "The printed masthead. Capped at 80% width so it never runs to the trim."
+      },
+      "sheet-step-number": {
+        "displayName": "Step Number",
+        "purpose": "Zero-padded Poster Red numerals in the sheet's 12mm numeral column. Tabular figures keep 01–99 on one axis."
+      },
+      "sheet-step": {
+        "displayName": "Step Text",
+        "purpose": "The instruction itself — the largest running text on the sheet, because it is read at arm's length."
+      },
+      "sheet-body": {
+        "displayName": "Sheet Body",
+        "purpose": "The sheet's base size: material names, notes, caution bodies."
+      },
+      "sheet-label": {
+        "displayName": "Sheet Label",
+        "purpose": "Printed section heads, meta row, supply kinds, footer. Uppercase, tracked 0.08em, 700."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "state-change",
+        "value": "90ms linear",
+        "purpose": "The system's only transition. Applied to background, color, and border-color exclusively — never to position, scale, or opacity."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "editor-collapse",
+        "value": "1100px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single committed action on a screen — New tutorial, Print. Fills Poster Red on hover, the only transient use of red as a background.",
+      "html": "<button class=\"ds-btn ds-btn--primary\" type=\"button\">New tutorial</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border: 1px solid var(--ink, #0a0a0a); border-radius: 0; background: transparent; color: var(--ink, #0a0a0a); font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background 90ms linear, color 90ms linear; } .ds-btn--primary { background: var(--ink, #0a0a0a); color: var(--paper, #fff); } .ds-btn--primary:hover { background: var(--accent, #e4002b); border-color: var(--accent, #e4002b); } .ds-btn:focus-visible { outline: 2px solid var(--accent, #e4002b); outline-offset: 2px; }"
+    },
+    {
+      "name": "Default Button",
+      "kind": "button",
+      "refersTo": "button",
+      "description": "Every secondary action. Transparent at rest, inverting to a Press Black fill on hover.",
+      "html": "<button class=\"ds-btn\" type=\"button\">Import</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border: 1px solid var(--ink, #0a0a0a); border-radius: 0; background: transparent; color: var(--ink, #0a0a0a); font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: background 90ms linear, color 90ms linear; } .ds-btn:hover { background: var(--ink, #0a0a0a); color: var(--paper, #fff); } .ds-btn:focus-visible { outline: 2px solid var(--accent, #e4002b); outline-offset: 2px; }"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Card row actions — Print, Duplicate, Delete. Borderless so three of them cannot out-shout the card they sit in; the text goes Poster Red on hover.",
+      "html": "<div style=\"display:flex;gap:4px\"><button class=\"ds-btn-quiet\" type=\"button\">Print</button><button class=\"ds-btn-quiet\" type=\"button\">Duplicate</button><button class=\"ds-btn-quiet\" type=\"button\">Delete</button></div>",
+      "css": ".ds-btn-quiet { display: inline-flex; align-items: center; padding: 7px 8px; border: 1px solid transparent; border-radius: 0; background: transparent; color: var(--muted, #6b6b6b); font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: color 90ms linear; } .ds-btn-quiet:hover { color: var(--accent, #e4002b); } .ds-btn-quiet:focus-visible { outline: 2px solid var(--accent, #e4002b); outline-offset: 2px; }"
+    },
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "filter",
+      "description": "Frequency filters in the Library and the A4/A5 switch in the print view. Selection is driven by aria-pressed, so the accessible state and the visual state are the same fact.",
+      "html": "<div style=\"display:flex;gap:4px\"><button class=\"ds-filter\" type=\"button\" aria-pressed=\"true\">All</button><button class=\"ds-filter\" type=\"button\" aria-pressed=\"false\">Weekly</button><button class=\"ds-filter\" type=\"button\" aria-pressed=\"false\">Monthly</button></div>",
+      "css": ".ds-filter { padding: 5px 10px; border: 1px solid var(--rule, #c9c9c9); border-radius: 0; background: transparent; color: var(--muted, #6b6b6b); font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; transition: background 90ms linear, color 90ms linear, border-color 90ms linear; } .ds-filter:hover { border-color: var(--ink, #0a0a0a); color: var(--ink, #0a0a0a); } .ds-filter[aria-pressed=\"true\"] { background: var(--ink, #0a0a0a); border-color: var(--ink, #0a0a0a); color: var(--paper, #fff); } .ds-filter:focus-visible { outline: 2px solid var(--accent, #e4002b); outline-offset: 2px; }"
+    },
+    {
+      "name": "Underlined Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Every text input in the editor. No box — a label, a line, and the text sitting on it. The underline goes Poster Red on focus, which is why the browser outline is suppressed here and nowhere else.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field__label\">Area</span><input class=\"ds-input\" type=\"text\" placeholder=\"Bathroom\" /></label>",
+      "css": ".ds-field { display: block; } .ds-field__label { display: block; margin-bottom: 4px; color: var(--muted, #6b6b6b); font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; } .ds-input { display: block; width: 100%; padding: 5px 0; border: 0; border-bottom: 1px solid var(--rule, #c9c9c9); border-radius: 0; background: transparent; color: var(--ink, #0a0a0a); font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; transition: border-color 90ms linear; } .ds-input::placeholder { color: var(--rule, #c9c9c9); } .ds-input:focus { outline: none; border-bottom-color: var(--accent, #e4002b); }"
+    },
+    {
+      "name": "Library Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "One tutorial in the Library grid. The entire hover affordance is the border going from Hairline Grey to Press Black — no lift, no shadow, no scale.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card__thumb\"><span class=\"ds-card__thumb-empty\">No photo</span></div><div class=\"ds-card__body\"><span class=\"ds-card__title\">Bathroom — Descale &amp; Deep Clean</span><span class=\"ds-card__meta\">Monthly · Bathroom · 7 steps</span></div></div>",
+      "css": ".ds-card { display: flex; flex-direction: column; width: 260px; background: var(--paper, #fff); border: 1px solid var(--rule, #c9c9c9); border-radius: 0; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; transition: border-color 90ms linear; } .ds-card:hover { border-color: var(--ink, #0a0a0a); } .ds-card__thumb { aspect-ratio: 4 / 3; display: grid; place-items: center; overflow: hidden; background: #fafafa; border-bottom: 1px solid var(--rule-faint, #e6e6e6); } .ds-card__thumb-empty { color: var(--rule, #c9c9c9); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; } .ds-card__body { display: flex; flex-direction: column; gap: 4px; padding: 12px; } .ds-card__title { font-size: 16px; line-height: 24px; font-weight: 700; color: var(--ink, #0a0a0a); } .ds-card__meta { font-size: 12px; line-height: 16px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted, #6b6b6b); }"
+    },
+    {
+      "name": "Image Dropzone",
+      "kind": "custom",
+      "refersTo": "dropzone",
+      "description": "The only dashed border in the system. Dashed means nothing here yet; it resolves to a solid Poster Red edge on hover or drag-over, and that resolution is the entire feedback.",
+      "html": "<button class=\"ds-dropzone\" type=\"button\">Drop, paste or choose a photo</button>",
+      "css": ".ds-dropzone { display: flex; align-items: center; justify-content: center; gap: 8px; width: 320px; min-height: 40px; padding: 8px 12px; border: 1px dashed var(--rule, #c9c9c9); border-radius: 0; background: transparent; color: var(--muted, #6b6b6b); font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; transition: border-color 90ms linear, color 90ms linear; } .ds-dropzone:hover { border-style: solid; border-color: var(--accent, #e4002b); color: var(--accent, #e4002b); } .ds-dropzone:focus-visible { outline: 2px solid var(--accent, #e4002b); outline-offset: 2px; }"
+    },
+    {
+      "name": "Top Bar",
+      "kind": "nav",
+      "refersTo": "button-primary",
+      "description": "The system's only navigation, and the only place the mark appears: the wordmark, a 7×7px Poster Red square, and a context subtitle. Its 1px Press Black bottom rule reads as the first rule of the page.",
+      "html": "<header class=\"ds-topbar\"><a class=\"ds-topbar__brand\" href=\"#\"><span class=\"ds-topbar__mark\">Blatt</span><span class=\"ds-topbar__sub\">Cleaning tutorials</span></a><div class=\"ds-topbar__actions\"><button class=\"ds-btn\" type=\"button\">Import</button><button class=\"ds-btn ds-btn--primary\" type=\"button\">New tutorial</button></div></header>",
+      "css": ".ds-topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 24px; background: var(--paper, #fff); border-bottom: 1px solid var(--ink, #0a0a0a); font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; } .ds-topbar__brand { display: flex; align-items: baseline; gap: 12px; text-decoration: none; color: var(--ink, #0a0a0a); } .ds-topbar__mark { font-size: 20px; line-height: 28px; font-weight: 700; letter-spacing: -0.03em; } .ds-topbar__mark::after { content: \"\"; display: inline-block; width: 7px; height: 7px; margin-left: 5px; background: var(--accent, #e4002b); } .ds-topbar__sub { color: var(--muted, #6b6b6b); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; } .ds-topbar__actions { display: flex; align-items: center; gap: 8px; } .ds-topbar .ds-btn { display: inline-flex; align-items: center; padding: 7px 14px; border: 1px solid var(--ink, #0a0a0a); border-radius: 0; background: transparent; color: var(--ink, #0a0a0a); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; transition: background 90ms linear, color 90ms linear; } .ds-topbar .ds-btn:hover { background: var(--ink, #0a0a0a); color: var(--paper, #fff); } .ds-topbar .ds-btn--primary { background: var(--ink, #0a0a0a); color: var(--paper, #fff); } .ds-topbar .ds-btn--primary:hover { background: var(--accent, #e4002b); border-color: var(--accent, #e4002b); }"
+    },
+    {
+      "name": "Sheet Step Row",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "The signature component: a zero-padded Poster Red numeral, the instruction, an optional tip behind a left rule, and a reserved image column. Rendered here in px for the panel; on paper it is authored in pt and mm.",
+      "html": "<ol class=\"ds-steps\"><li class=\"ds-step\"><p class=\"ds-step__number\">03</p><div><p class=\"ds-step__text\">Spray the descaler over the tiles and leave it to work for ten minutes. Do not let it dry.</p><p class=\"ds-step__tip\">Set a timer — guessing this is how you get streaks.</p></div><div class=\"ds-step__figure\"></div></li></ol>",
+      "css": ".ds-steps { margin: 0; padding: 0; list-style: none; font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; width: 520px; } .ds-step { display: grid; grid-template-columns: 44px 1fr 140px; gap: 0 18px; padding: 11px 0; border-bottom: 1px solid var(--rule, #c9c9c9); } .ds-step__number { margin: 0; font-size: 27px; line-height: 27px; font-weight: 700; letter-spacing: -0.03em; color: var(--accent, #e4002b); font-variant-numeric: tabular-nums; } .ds-step__text { margin: 0; font-size: 14px; line-height: 19px; color: var(--ink, #0a0a0a); } .ds-step__tip { margin: 5px 0 0; padding-left: 14px; border-left: 1px solid var(--rule, #c9c9c9); font-size: 11px; line-height: 15px; color: var(--muted, #6b6b6b); } .ds-step__figure { aspect-ratio: 4 / 3; border: 1px solid var(--rule, #c9c9c9); background: #fff; }"
+    },
+    {
+      "name": "Caution Band",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "The highest-stakes content on any sheet: ruled Poster Red above and below, em-dash bullets in red, and placed before the materials because it changes what the reader is about to do.",
+      "html": "<section class=\"ds-cautions\"><p class=\"ds-cautions__label\">Cautions</p><ul class=\"ds-cautions__list\"><li>Never mix descaler with bleach — the fumes are chlorine gas.</li><li>Ventilate the room and open the window before you start.</li></ul></section>",
+      "css": ".ds-cautions { width: 520px; padding: 9px 0; border-top: 1px solid var(--accent, #e4002b); border-bottom: 1px solid var(--accent, #e4002b); font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; } .ds-cautions__label { margin: 0 0 4px; font-size: 11px; line-height: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent, #e4002b); } .ds-cautions__list { margin: 0; padding: 0; list-style: none; } .ds-cautions__list li { font-size: 13px; line-height: 17px; color: var(--ink, #0a0a0a); padding-left: 18px; text-indent: -18px; } .ds-cautions__list li::before { content: \"— \"; color: var(--accent, #e4002b); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Workshop Placard",
+    "overview": "The enamelled instruction plate bolted beside a machine. It is authoritative without raising its voice, survives being wiped down, and is read at a glance by whoever is on shift rather than by the person who wrote it. Nothing on a placard is there to be admired; every mark is there because leaving it off would cost someone a mistake. The sheet is the product, the screen is where the placard gets made, and the two are held deliberately apart.\n\nThe system is International Typographic Style applied literally rather than gestured at: one installed grotesque, a fixed scale on an 8px baseline, hairline rules instead of boxes, whitespace doing the grouping, and exactly one accent. There are no shadows, no rounded corners, no gradients, and no webfont. Type is flush left and ragged right, never justified. The restraint is not minimalism as a taste — it is what survives a greyscale laser printer, a laminating pouch, and a reader at arm's length in bad light.\n\nIts confirmed anti-references are the consumer recipe app (rounded cards, soft shadows, chatty warmth), the corporate SOP (a Word template wearing a revision table), and the SaaS dashboard (grey chrome, tasteful blue, 6px radii on everything). Photography is explicitly not rejected: the photos are load-bearing evidence, and the grid is built to hold them.",
+    "keyCharacteristics": [
+      "One grotesque, no webfont — it must print with no network.",
+      "Hairline rules and whitespace instead of boxes, cards-with-shadows, or fills.",
+      "Exactly one accent, #e4002b, spent only where a reader must not miss something.",
+      "Zero radius, zero shadow, zero gradient — declared, not defaulted.",
+      "Print units (pt, mm) on the sheet, so the screen preview is true rather than approximate.",
+      "A hard boundary between the printed sheet and the application around it."
+    ],
+    "rules": [
+      {
+        "name": "The Do-Not-Miss Rule",
+        "body": "Poster Red marks anything the reader must not overlook: sequence, danger, error, and where the keyboard currently is. If an element would still be understood in grey, it stays grey. This is a semantic test, not an inventory — it scales to components that do not exist yet, and it is why focus rings and caution rules are the same red without contradiction.",
+        "section": "colors"
+      },
+      {
+        "name": "The Greyscale Rule",
+        "body": "Every layout must be fully legible printed in black and white. Colour reinforces meaning; it never carries meaning alone. Any element that depends on red to be understood fails, and the step numerals pass only because their size and position already encode sequence.",
+        "section": "colors"
+      },
+      {
+        "name": "The Bench Rule",
+        "body": "#ededed exists to make white read as paper. It never appears inside a sheet, and no sheet element may use it as a fill.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Grotesque Rule",
+        "body": "One family, no webfont, no second face — not for code, not for numerals, not for a display moment. A font that must be fetched is a font that can fail to arrive at the printer.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ragged Right Rule",
+        "body": "Flush left, ragged right, never justified. The sheet sets hyphens: none — a hyphenated instruction is a misread instruction.",
+        "section": "typography"
+      },
+      {
+        "name": "The Uppercase Is A Label Rule",
+        "body": "Uppercase plus 0.08em tracking is reserved for labels, buttons, and metadata. It never sets a sentence, a step, or a caution body.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sheet Decides The Grid Rule",
+        "body": "The grid is decided by the sheet, not row by row. If any step carries a photo, every step reserves the image column so the text keeps one measure down the page; if none do, every step runs full width. A material with no photo still draws its empty hairline frame. Mixed measures are what make a page look accidental.",
+        "section": "layout"
+      },
+      {
+        "name": "The True Measure Rule",
+        "body": "The sheet is authored in pt and mm end to end. Scaling for preview is a transform on a wrapper, never a second set of numbers. If you find yourself converting a sheet measurement to px, you are building a second source of truth.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Rule",
+        "body": "No shadows, no glows, no blurs, no gradient fills. Two gradients exist in the codebase and both are geometry, not decoration: the select control's caret is drawn from two 5px linear-gradient triangles. That is the only sanctioned use — drawing a shape without shipping an icon.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Zero Radius Rule",
+        "body": "No rounded corners, anywhere, at any size. A radius appearing in a diff is a regression, not a refinement.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Empty Frame Rule",
+        "body": "A missing image draws its frame anyway. An empty hairline rectangle costs almost no ink and keeps a row of labels on one baseline; a collapsed frame shunts its label up the page and makes the grid look broken.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Paper/Workbench Rule",
+        "body": "The sheet is a printed object that happens to be previewed on a screen; the application is furniture standing around it. They share a vocabulary but never a stylesheet. sheet.css defines its own --sheet-* values, imports nothing from the application, and must stay independently inlinable into an exported file. Audit test: open an exported .blatt.html with the application deleted. If it does not render identically, the boundary has been breached.",
+        "section": "components"
+      },
+      {
+        "name": "The Printer's Furniture Rule",
+        "body": "No control may be more visually assertive than the content it operates on. If a button competes with a step numeral for the eye, the button is wrong.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do spend Poster Red only where a reader must not miss something — sequence, danger, error, focus. If the element still reads correctly in grey, leave it grey.",
+      "Do keep every layout legible in greyscale, and verify by printing black-and-white rather than by imagining it.",
+      "Do reserve a column for the whole sheet when any single row needs it, and draw empty frames rather than collapsing them.",
+      "Do author sheet measurements in pt and mm, and scale for preview with a transform on a wrapper.",
+      "Do use hairline rules and whitespace for hierarchy: 1px/0.75pt Press Black to close a section, 1px/0.5pt Hairline Grey for structure, Ghost Rule for repetition.",
+      "Do express selection with aria-pressed and style from the attribute, so the accessible state and the visual state cannot drift.",
+      "Do keep transitions at 90ms linear on colour properties only.",
+      "Do set break-inside: avoid on anything a reader performs as a unit."
+    ],
+    "donts": [
+      "Don't add a border radius. Anywhere. At any size.",
+      "Don't add a box-shadow, glow, blur, or decorative gradient. Depth is rules and whitespace.",
+      "Don't introduce a second typeface, or any webfont — an exported sheet must print identically with no network.",
+      "Don't justify text or enable hyphenation. Flush left, ragged right.",
+      "Don't use Poster Red as a background for text the reader has to read, or as a fill that makes a screen look livelier.",
+      "Don't let sheet.css reference an application token, or app.css restyle a .sheet element. The export has to stand alone.",
+      "Don't put Bench Grey (#ededed) inside a sheet; it is workbench, not paper.",
+      "Don't crop photographs to portrait frames. 4:3 landscape, object-fit: cover.",
+      "Don't add an icon set. The system has one mark — the 7×7px red square — and draws the rest with rules and type.",
+      "Don't animate position, scale, or opacity for effect. State changes are colour changes."
+    ]
+  }
+}
